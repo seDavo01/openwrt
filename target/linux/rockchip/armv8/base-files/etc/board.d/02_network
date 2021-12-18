@@ -40,6 +40,7 @@ rockchip_setup_macs()
 		;;
 	xunlong,orangepi-r1-plus)
 		wan_mac=$(macaddr_add "$(cat /sys/class/net/eth1/address)" -1)
+		;;
 	esac
 
 	[ -n "$lan_mac" ] && ucidef_set_interface_macaddr "lan" $lan_mac
